@@ -46,6 +46,11 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     private var shouldTryToAuthenticateWithBiometrics = true
     
+    // pridal jsem, aby byl status bar bily
+    override public func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
     // MARK: - Initializers
     
     public init(state: PasscodeLockStateType, configuration: PasscodeLockConfigurationType, animateOnDismiss: Bool = true) {
